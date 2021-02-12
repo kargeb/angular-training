@@ -1,0 +1,23 @@
+<p>Products</p>
+<ul>
+  <li *ngFor="let product of products">
+    <p>
+      {{ product.name }}
+    </p>
+    <p [class]="setProductLevel(product.price)">
+      {{ product.price | currency }}
+      <span *ngIf="product.price > 100">OMG this is so expensive!</span>
+    </p>
+    <!-- <input type="text" #priceInput /> -->
+    <input
+      type="text"
+      [value]="product.price"
+      (input)="product.price = $event.target.value"
+    />
+    <button on-click="changePrice(product, priceInput.value)">
+      <!-- <button > -->
+      Change price
+    </button>
+    <hr />
+  </li>
+</ul>
