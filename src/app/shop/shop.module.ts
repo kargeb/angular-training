@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { ShopRoutingModule } from './shop-routing.module';
+// import { ShopRoutingModule } from './shop-routing.module';
 import { ShopComponent } from './pages/shop/shop.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
@@ -15,17 +15,18 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
     ProductComponent,
     ProductListComponent,
     ProductAlertsComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     CommonModule,
-    ShopRoutingModule,
+    // ShopRoutingModule,
     RouterModule.forChild([
       {
         path: 'shop',
         component: ProductListComponent,
       },
       {
-        path: 'shop/products/:id',
+        path: 'shop/products/:productId',
         component: ProductDetailsComponent,
       },
     ]),
