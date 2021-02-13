@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,7 +10,7 @@ import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [AppComponent, MainPageComponent, NavComponent],
-  imports: [BrowserModule, AppRoutingModule, ShopModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, ShopModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -9,6 +9,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductAlertsComponent } from './components/product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { ShippingComponent } from './pages/shipping/shipping.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CartComponent } from './pages/cart/cart.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
+    ShippingComponent,
   ],
   imports: [
     CommonModule,
@@ -34,6 +36,10 @@ import { CartComponent } from './pages/cart/cart.component';
       {
         path: 'shop/cart',
         component: CartComponent,
+      },
+      {
+        path: 'shop/shipping',
+        component: ShippingComponent,
       },
     ]),
   ],
