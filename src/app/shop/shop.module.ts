@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
-// import { ShopRoutingModule } from './shop-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShopRoutingModule } from './shop-routing.module';
 import { ShopComponent } from './pages/shop/shop.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
@@ -10,6 +10,7 @@ import { ProductAlertsComponent } from './components/product-alerts/product-aler
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ShippingComponent } from './pages/shipping/shipping.component';
+// import { FormBuilder } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,9 @@ import { ShippingComponent } from './pages/shipping/shipping.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    // FormBuilder,
     // ShopRoutingModule,
     RouterModule.forChild([
       {
