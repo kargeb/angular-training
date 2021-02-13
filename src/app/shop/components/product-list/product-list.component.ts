@@ -11,5 +11,9 @@ export class ProductListComponent implements OnInit {
 
   constructor() {}
 
+  share() {
+    window.alert('Products has been shared');
+  }
+
   ngOnInit(): void {}
 }
