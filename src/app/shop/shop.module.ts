@@ -8,6 +8,7 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductAlertsComponent } from './components/product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
+    CartComponent,
   ],
   imports: [
     CommonModule,
@@ -28,6 +30,10 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
       {
         path: 'shop/products/:productId',
         component: ProductDetailsComponent,
+      },
+      {
+        path: 'shop/cart',
+        component: CartComponent,
       },
     ]),
   ],
