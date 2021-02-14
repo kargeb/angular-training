@@ -7,10 +7,11 @@ import { ShopModule } from './shop/shop.module';
 import { MainPageComponent } from './main-page/main-page.component';
 import { NavComponent } from './nav/nav.component';
 import { HeroesModule } from './heroes/heroes.module';
+import { MessagesComponent } from './messages/messages.component';
 // import { HeroesComponent } from './heores/heroes/heroes.component';
 
 @NgModule({
-  declarations: [AppComponent, MainPageComponent, NavComponent],
+  declarations: [AppComponent, MainPageComponent, NavComponent, MessagesComponent],
   imports: [
     ShopModule,
     BrowserModule,
