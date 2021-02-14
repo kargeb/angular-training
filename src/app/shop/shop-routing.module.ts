@@ -29,22 +29,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class ShopRoutingModule {}
-
-// RouterModule.forChild([
-//   // {
-//   //   path: 'shop',
-//   //   component: ProductListComponent,
-//   // },
-//   {
-//     path: 'shop/products/:productId',
-//     component: ProductDetailsComponent,
-//   },
-//   {
-//     path: 'shop/cart',
-//     component: CartComponent,
-//   },
-//   {
-//     path: 'shop/shipping',
-//     component: ShippingComponent,
-//   },
-// ]),

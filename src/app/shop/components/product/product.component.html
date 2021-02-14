@@ -14,6 +14,7 @@
       type="text"
       [value]="product.price"
       (input)="product.price = $event.target.value"
+      ks
     />
     <button on-click="changePrice(product, priceInput.value)">
       <!-- <button > -->
