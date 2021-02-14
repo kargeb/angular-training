@@ -6,11 +6,18 @@ import { AppComponent } from './app.component';
 import { ShopModule } from './shop/shop.module';
 import { MainPageComponent } from './main-page/main-page.component';
 import { NavComponent } from './nav/nav.component';
-import { HeroesModule } from './heroes/heroes/heroes.module';
+import { HeroesModule } from './heroes/heroes.module';
+// import { HeroesComponent } from './heores/heroes/heroes.component';
 
 @NgModule({
   declarations: [AppComponent, MainPageComponent, NavComponent],
-  imports: [ShopModule, BrowserModule, HttpClientModule, AppRoutingModule, HeroesModule],
+  imports: [
+    ShopModule,
+    BrowserModule,
+    HttpClientModule,
+    HeroesModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
