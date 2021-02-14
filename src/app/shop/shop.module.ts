@@ -29,10 +29,10 @@ import { ShippingComponent } from './pages/shipping/shipping.component';
     // FormBuilder,
     // ShopRoutingModule,
     RouterModule.forChild([
-      {
-        path: 'shop',
-        component: ProductListComponent,
-      },
+      // {
+      //   path: 'shop',
+      //   component: ProductListComponent,
+      // },
       {
         path: 'shop/products/:productId',
         component: ProductDetailsComponent,
