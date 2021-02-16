@@ -5,6 +5,10 @@
 //   box-sizing: border-box;
 // }
 
-$danger: pink;
+// $danger: pink;
 
 @import "~bootstrap/scss/bootstrap.scss";
+
+ul {
+  list-style: none;
+}
