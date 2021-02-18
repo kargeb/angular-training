@@ -15,6 +15,9 @@
             </div>
             <div class="row">
               <div class="col-md-6">
+                <span *ngIf="message">
+                  {{ message }}
+                </span>
                 <h4>Filtered by: {{ listFilter }}</h4>
               </div>
             </div>
@@ -53,7 +56,12 @@
               <td>{{ product.releaseDate }}</td>
               <td>{{ product.price | currency: "USD":"symbol":"1.2-2" }}</td>
               <!-- <td>{{ product.starRating }}</td> -->
-              <td><pm-star [rating]="product.starRating"></pm-star></td>
+              <td>
+                <pm-star
+                  [rating]="product.starRating"
+                  (ratingClicked)="onRankingClicked($event)"
+                ></pm-star>
+              </td>
             </tr>
           </tbody>
         </table>

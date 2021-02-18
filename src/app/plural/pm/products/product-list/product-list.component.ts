@@ -13,6 +13,9 @@ export class ProductListComponent implements OnInit {
     this.listFilter = '';
   }
 
+  // currentRating: number = 0;
+  message = '';
+
   imageWidth = 50;
   imageMargin = 2;
   showImage = false;
@@ -28,6 +31,10 @@ export class ProductListComponent implements OnInit {
     this.filteredProducts = this.listFilter
       ? this.performFilter(this.listFilter)
       : this.products;
+  }
+
+  onRankingClicked(message): void {
+    this.message = message;
   }
 
   performFilter(filterBy: string): IProduct[] {
