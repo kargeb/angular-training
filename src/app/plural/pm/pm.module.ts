@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import { StarComponent } from './shared/star/star.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,13 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
     ConvertToSpacesPipe,
     ProductDetailComponent,
   ],
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild([
+      { path: 'pm/products', component: PmComponent },
+      { path: 'pm', redirectTo: 'pm/products', pathMatch: 'full' },
+    ]),
+  ],
 })
 export class PmModule {}
