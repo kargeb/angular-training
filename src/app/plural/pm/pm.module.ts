@@ -21,6 +21,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule.forChild([
       { path: 'pm/products', component: PmComponent },
+      { path: 'pm/products/:id', component: PmComponent },
+      { path: 'pm/welcome', component: PmComponent },
       { path: 'pm', redirectTo: 'pm/products', pathMatch: 'full' },
     ]),
   ],
