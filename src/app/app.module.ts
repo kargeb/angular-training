@@ -8,6 +8,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { NavComponent } from './nav/nav.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { MessagesComponent } from './messages/messages.component';
+import { PmModule } from './plural/pm/pm.module';
+
 // import { HeroesComponent } from './heores/heroes/heroes.component';
 
 @NgModule({
@@ -17,6 +19,7 @@ import { MessagesComponent } from './messages/messages.component';
     BrowserModule,
     HttpClientModule,
     HeroesModule,
+    PmModule,
     AppRoutingModule,
   ],
   providers: [],
