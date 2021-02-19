@@ -7,6 +7,7 @@ import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import { StarComponent } from './shared/star/star.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { RouterModule } from '@angular/router';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -15,15 +16,16 @@ import { RouterModule } from '@angular/router';
     StarComponent,
     ConvertToSpacesPipe,
     ProductDetailComponent,
+    NavComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild([
-      { path: 'pm/products', component: PmComponent },
-      { path: 'pm/products/:id', component: PmComponent },
+    RouterModule.forRoot([
+      { path: 'pm/products', component: ProductListComponent },
+      { path: 'pm/products/:id', component: ProductDetailComponent },
       { path: 'pm/welcome', component: PmComponent },
-      { path: 'pm', redirectTo: 'pm/products', pathMatch: 'full' },
+      { path: 'pm', redirectTo: 'pm/welcome', pathMatch: 'full' },
     ]),
   ],
 })
