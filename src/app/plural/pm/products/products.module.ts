@@ -6,6 +6,7 @@ import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ProductDetailGuard } from './product-detail.guard';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,17 @@ import { RouterModule } from '@angular/router';
     ConvertToSpacesPipe,
     ProductDetailComponent,
   ],
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild([
+      { path: 'pm/products', component: ProductListComponent },
+      {
+        path: 'pm/products/:id',
+        canActivate: [ProductDetailGuard],
+        component: ProductDetailComponent,
+      },
+    ]),
+  ],
 })
 export class ProductsModule {}
