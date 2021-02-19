@@ -8,6 +8,7 @@ import { StarComponent } from './shared/star/star.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { RouterModule } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
+import { ProductDetailGuard } from './products/product-detail.guard';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,11 @@ import { NavComponent } from './nav/nav.component';
     FormsModule,
     RouterModule.forRoot([
       { path: 'pm/products', component: ProductListComponent },
-      { path: 'pm/products/:id', component: ProductDetailComponent },
+      {
+        path: 'pm/products/:id',
+        canActivate: [ProductDetailGuard],
+        component: ProductDetailComponent,
+      },
       { path: 'pm/welcome', component: PmComponent },
       { path: 'pm', redirectTo: 'pm/welcome', pathMatch: 'full' },
     ]),
